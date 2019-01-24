@@ -57,7 +57,7 @@ public abstract class TennisGame {
     }
 
     public boolean isWin(Player p) throws InvalidPlayerException {
-        return this.getStatePlayer(p) == WIN;
+        return this.getStatePlayer(p).toString() == WIN.toString();
     }
 
     protected abstract void init();
@@ -66,4 +66,10 @@ public abstract class TennisGame {
 
     public abstract String getPoint(Player p) throws InvalidPlayerException;
 
+    @Override
+    public String toString() {
+        return "TennisGame " +
+                " Player 1 : " + playerOneState +
+                " Player 2 : " + playerTwoState;
+    }
 }

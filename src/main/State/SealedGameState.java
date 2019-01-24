@@ -8,11 +8,10 @@ public enum SealedGameState implements GameState {
     FOUR("4"),
     FIVE("5"),
     SIX("6"),
-    SEVEN("7"),
+    SEVEN("-"),
     EQUALS("="),
-    SECURE("+1"),
+    SECURE("+"),
     WIN("WIN");
-
 
     private String state = "";
 

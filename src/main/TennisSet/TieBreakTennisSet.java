@@ -27,7 +27,8 @@ public class TieBreakTennisSet extends TennisSet {
     public void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException {
         {
             this.game.addPoint(p);
-            if(this.game.isWin(p))
+            boolean b = this.game.isWin(p);
+            if(b)
             {
                 SetState currentState = this.getStatePlayer(p);
                 this.game = new SimpleTennisGame(this.playerOne,this.playerTwo);
@@ -55,8 +56,10 @@ public class TieBreakTennisSet extends TennisSet {
                             this.setStatePlayer(p,TIE_BREAK);
                             this.setStateAdversePlayer(p,TIE_BREAK);
                         }
-                        else
+                        else if(this.getStateAdversePlayer(p) == FIVE)
                             this.setStatePlayer(p,SIX);
+                        else
+                            this.setStatePlayer(p,WIN);
                         break;
                     case SIX:
                         this.setStatePlayer(p,WIN);

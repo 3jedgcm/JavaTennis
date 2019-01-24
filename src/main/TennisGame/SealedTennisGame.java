@@ -57,8 +57,12 @@ public class SealedTennisGame extends TennisGame {
                     this.setStatePlayer(p,EQUALS);
                     this.setStateAdversePlayer(p,EQUALS);
                 }
+                else if(adverseState == SIX)
+                {
+                    this.setStatePlayer(p,SEVEN);
+                }
                 else
-                this.setStatePlayer(p,SEVEN);
+                this.setStatePlayer(p,WIN);
                 break;
             case SEVEN:
                 if(adverseState == SIX)

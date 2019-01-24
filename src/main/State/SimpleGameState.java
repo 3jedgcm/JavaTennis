@@ -6,7 +6,7 @@ public enum SimpleGameState implements GameState {
     THIRTY("30"),
     FORTY("40"),
     ADVANTAGE("Advantage"),
-    WIN("win");
+    WIN("WIN");
 
     private String state = "";
 

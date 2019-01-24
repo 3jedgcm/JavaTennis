@@ -24,9 +24,6 @@ public abstract class TennisSet {
         this.playerTwo = p2;
     }
 
-
-
-
     protected SetState getStateAdversePlayer(Player p) throws InvalidPlayerException {
 
         if(playerOne.equals(p))
@@ -72,4 +69,17 @@ public abstract class TennisSet {
     }
     public abstract void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException;
     public abstract String getPoint(Player p) throws InvalidPlayerException;
+
+
+    @Override
+    public String toString() {
+        return "TennisSet " +
+                " PLAYER ONE : " + playerOneSetState +
+                " SET PLAYER TWO : " + playerTwoSetState;
+    }
+
+    public String toStringGame()
+    {
+        return game.toString();
+    }
 }
