@@ -1,11 +1,11 @@
 package State;
 
-public enum SimpleGameState implements SetGameState {
-    LOVE("love"),
-    FIFTEEN("fifteen"),
-    THIRTY("thirty"),
-    FORTY("forty"),
-    ADVANTAGE("advantage"),
+public enum SimpleGameState implements GameState {
+    LOVE("0"),
+    FIFTEEN("15"),
+    THIRTY("30"),
+    FORTY("40"),
+    ADVANTAGE("Advantage"),
     WIN("win");
 
     private String state = "";

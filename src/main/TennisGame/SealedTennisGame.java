@@ -1,15 +1,18 @@
-package Game;
+package TennisGame;
 
 import Data.Player;
-import State.SetGameState;
+import State.GameState;
 import Exception.*;
-import State.TieBreakGameState;
+import State.SealedGameState;
 
-import static State.TieBreakGameState.*;
+import static State.SealedGameState.*;
 
-public class TieBreakTennisGame extends TennisGame {
+public class SealedTennisGame extends TennisGame {
 
-    public TieBreakTennisGame(Player p1, Player p2) {
+    private int playerOnePoint;
+    private int playerTwoPoint;
+
+    public SealedTennisGame(Player p1, Player p2) {
         super(p1, p2);
         this.init();
     }
@@ -17,16 +20,22 @@ public class TieBreakTennisGame extends TennisGame {
     @Override
     protected void init()
     {
-        this.playerOneState = ONE;
-        this.playerTwoState = ONE;
+        this.playerOneState = ZERO;
+        this.playerTwoState = ZERO;
+        this.playerOnePoint = 0;
+        this.playerTwoPoint = 0;
     }
 
     @Override
     public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException {
-        SetGameState currentState = this.getStatePlayer(p);
-        SetGameState adverseState = this.getStateAdversePlayer(p);
-        switch ((TieBreakGameState)currentState)
+        GameState currentState = this.getStatePlayer(p);
+        GameState adverseState = this.getStateAdversePlayer(p);
+        this.incrementPoint(p);
+        switch ((SealedGameState)currentState)
         {
+            case ZERO:
+                this.setStatePlayer(p,ONE);
+                break;
             case ONE:
                 this.setStatePlayer(p,TWO);
                 break;
@@ -52,7 +61,7 @@ public class TieBreakTennisGame extends TennisGame {
                 this.setStatePlayer(p,SEVEN);
                 break;
             case SEVEN:
-                if(adverseState != SECURE)
+                if(adverseState == SIX)
                 {
                     this.setStatePlayer(p,WIN);
                 }
@@ -73,7 +82,24 @@ public class TieBreakTennisGame extends TennisGame {
                 break;
             default:
                 throw new InvalidPlayerStateException();
-
         }
+    }
+
+    private void incrementPoint(Player p)
+    {
+        if(playerOne.equals(p))
+            this.playerOnePoint++;
+        else if(playerTwo.equals(p))
+            this.playerTwoPoint++;
+    }
+
+    @Override
+    public String getPoint(Player p) throws InvalidPlayerException {
+        if(playerOne.equals(p))
+            return this.playerOnePoint +"";
+        else if(playerTwo.equals(p))
+            return this.playerTwoPoint +"";
+        else
+            throw new InvalidPlayerException();
     }
 }

@@ -1,4 +1,4 @@
-package Game;
+package TennisGame;
 
 import Data.Player;
 import State.*;
@@ -21,8 +21,8 @@ public class SimpleTennisGame extends TennisGame {
 
     @Override
     public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException {
-        SetGameState currentState = this.getStatePlayer(p);
-        SetGameState adverseState = this.getStateAdversePlayer(p);
+        GameState currentState = this.getStatePlayer(p);
+        GameState adverseState = this.getStateAdversePlayer(p);
         switch ((SimpleGameState)currentState)
         {
             case LOVE:
@@ -48,6 +48,11 @@ public class SimpleTennisGame extends TennisGame {
             default:
                 throw new InvalidPlayerStateException();
         }
+    }
+
+    @Override
+    public String getPoint(Player p) throws InvalidPlayerException {
+        return this.getStatePlayer(p).toString();
     }
 
 }

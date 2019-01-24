@@ -1,7 +1,7 @@
-package Game;
+package TennisGame;
 
 import Data.Player;
-import State.SetGameState;
+import State.GameState;
 import Exception.*;
 
 import static State.SimpleGameState.WIN;
@@ -10,15 +10,15 @@ public abstract class TennisGame {
 
     protected Player playerOne;
     protected Player playerTwo;
-    protected SetGameState playerOneState;
-    protected SetGameState playerTwoState;
+    protected GameState playerOneState;
+    protected GameState playerTwoState;
 
     public TennisGame(Player p1, Player p2) {
         this.playerOne = p1;
         this.playerTwo = p2;
     }
 
-    protected SetGameState getStatePlayer(Player p) throws InvalidPlayerException {
+    protected GameState getStatePlayer(Player p) throws InvalidPlayerException {
 
         if(playerOne.equals(p))
             return playerOneState;
@@ -28,7 +28,7 @@ public abstract class TennisGame {
             throw new InvalidPlayerException();
     }
 
-    protected SetGameState getStateAdversePlayer(Player p) throws InvalidPlayerException {
+    protected GameState getStateAdversePlayer(Player p) throws InvalidPlayerException {
 
         if(playerOne.equals(p))
             return playerTwoState;
@@ -38,7 +38,7 @@ public abstract class TennisGame {
             throw new InvalidPlayerException();
     }
 
-    protected void setStatePlayer(Player p,SetGameState gs) throws InvalidPlayerException {
+    protected void setStatePlayer(Player p, GameState gs) throws InvalidPlayerException {
         if(playerOne.equals(p))
             this.playerOneState = gs;
         else if(playerTwo.equals(p))
@@ -47,7 +47,7 @@ public abstract class TennisGame {
             throw new InvalidPlayerException();
     }
 
-    protected void setStateAdversePlayer(Player p,SetGameState gs) throws InvalidPlayerException {
+    protected void setStateAdversePlayer(Player p, GameState gs) throws InvalidPlayerException {
         if(playerOne.equals(p))
             this.playerTwoState = gs;
         else if(playerTwo.equals(p))
@@ -63,5 +63,7 @@ public abstract class TennisGame {
     protected abstract void init();
 
     public abstract void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException;
+
+    public abstract String getPoint(Player p) throws InvalidPlayerException;
 
 }
