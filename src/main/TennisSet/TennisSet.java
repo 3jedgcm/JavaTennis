@@ -68,8 +68,9 @@ public abstract class TennisSet {
         return this.getStatePlayer(p) == WIN;
     }
     public abstract void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException;
-    public abstract String getPoint(Player p) throws InvalidPlayerException;
+    public abstract String getSetPoint(Player p) throws InvalidPlayerException;
 
+    public abstract String getGamePoint(Player p) throws InvalidPlayerException;
 
     @Override
     public String toString() {

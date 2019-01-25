@@ -7,7 +7,7 @@ public class Main {
         Player p1 = new Player("Coralie");
         Player p2 = new Player("Johana");
 
-        TennisSet testSet = new SimpleTennisSet(p1,p2);
+        TennisSet testSet = new TieBreakTennisSet(p1,p2);
 
         try
         {

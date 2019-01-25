@@ -77,8 +77,13 @@ public class TieBreakTennisSet extends TennisSet {
     }
 
     @Override
-    public String getPoint(Player p) throws InvalidPlayerException {
+    public String getSetPoint(Player p) throws InvalidPlayerException {
         return this.getStatePlayer(p).toString();
+    }
+
+    @Override
+    public String getGamePoint(Player p) throws InvalidPlayerException {
+        return this.game.getPoint(p);
     }
 
 }

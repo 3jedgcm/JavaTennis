@@ -102,13 +102,18 @@ public class SimpleTennisSet extends TennisSet {
     }
 
     @Override
-    public String getPoint(Player p) throws InvalidPlayerException {
+    public String getSetPoint(Player p) throws InvalidPlayerException {
         if(playerOne.equals(p))
             return this.playerOnePoint +"";
         else if(playerTwo.equals(p))
             return this.playerTwoPoint +"";
         else
             throw new InvalidPlayerException();
+    }
+
+    @Override
+    public String getGamePoint(Player p) throws InvalidPlayerException {
+        return this.game.getPoint(p);
     }
 
 }
