@@ -1,4 +1,6 @@
 import Data.Player;
+import State.MatchType;
+import TennisMatch.TennisMatch;
 import TennisSet.TennisSet;
 import TennisSet.*;
 
@@ -7,83 +9,77 @@ public class Main {
         Player p1 = new Player("Coralie");
         Player p2 = new Player("Johana");
 
-        TennisSet testSet = new TieBreakTennisSet(p1,p2);
+        TennisMatch tennisMatch = new TennisMatch(p1,p2, MatchType.BEST_OF_THREE,true);
 
         try
         {
-            //SET 1
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            //SET 2
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            //SET 3
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            //SET 4
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            //SET 5
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            //SET 1
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 2
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 3
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 4
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 5
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 5
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            //SET 5
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
 
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
-            testSet.addPoint(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
 
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
-            testSet.addPoint(p2);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
 
-            System.out.println(testSet.toString());
-            System.out.println(testSet.toStringGame());
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+            tennisMatch.updateWithPointWonBy(p1);
+
+
+
+            System.out.println(tennisMatch.isFinished());
+
+            System.out.println(tennisMatch.toString());
         }
         catch (Exception e)
         {

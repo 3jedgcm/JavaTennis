@@ -2,10 +2,10 @@ package State;
 
 public enum MatchType {
 
-    BEST_OF_THREE("BO3"),
-    BEST_OF_FIVE("BO5");
+    BEST_OF_THREE("2"),
+    BEST_OF_FIVE("3");
 
-    private String state = "";
+    private String state;
 
     MatchType(String state){
         this.state = state;

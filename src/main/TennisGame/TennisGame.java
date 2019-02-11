@@ -68,8 +68,8 @@ public abstract class TennisGame {
 
     @Override
     public String toString() {
-        return "TennisGame " +
-                " Player 1 : " + playerOneState +
-                " Player 2 : " + playerTwoState;
+        return "GAME[" +
+                "Player 1: " + playerOneState +
+                " Player 2: " + playerTwoState + " ]";
     }
 }

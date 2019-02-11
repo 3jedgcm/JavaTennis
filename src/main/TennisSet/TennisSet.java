@@ -74,9 +74,9 @@ public abstract class TennisSet {
 
     @Override
     public String toString() {
-        return "TennisSet " +
-                " PLAYER ONE : " + playerOneSetState +
-                " SET PLAYER TWO : " + playerTwoSetState;
+        return "SET[" +
+                "Player 1: " + playerOneSetState +
+                " Player 2: " + playerTwoSetState + " ]";
     }
 
     public String toStringGame()
