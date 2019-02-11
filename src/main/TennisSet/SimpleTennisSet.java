@@ -28,8 +28,10 @@ public class SimpleTennisSet extends TennisSet {
     }
 
     @Override
-    public void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException {
+    public void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException, IsAlreadyWinException {
         {
+            if(this.isWin(playerOne) || this.isWin(playerTwo))
+                throw new IsAlreadyWinException();
             this.game.addPoint(p);
             if(this.game.isWin(p))
             {
@@ -37,6 +39,9 @@ public class SimpleTennisSet extends TennisSet {
                 SetState currentState = this.getStatePlayer(p);
                 SetState adverseState = this.getStateAdversePlayer(p);
                 this.game = new SimpleTennisGame(this.playerOne,this.playerTwo);
+
+
+
                 switch ((SimpleSetState)currentState)
                 {
                     case ZERO:

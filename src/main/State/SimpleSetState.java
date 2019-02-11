@@ -8,6 +8,7 @@ public enum SimpleSetState implements SetState{
     FOUR("4"),
     FIVE("5"),
     SIX("6"),
+    SEVEN("7"),
     EQUALS("="),
     SECURE("+"),
     WIN("WIN");

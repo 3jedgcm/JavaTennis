@@ -27,10 +27,14 @@ public class SealedTennisGame extends TennisGame {
     }
 
     @Override
-    public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException {
+    public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException, IsAlreadyWinException {
         GameState currentState = this.getStatePlayer(p);
         GameState adverseState = this.getStateAdversePlayer(p);
         this.incrementPoint(p);
+        if(this.isWin(playerOne) || this.isWin(playerOne))
+            throw new IsAlreadyWinException();
+
+
         switch ((SealedGameState)currentState)
         {
             case ZERO:

@@ -30,6 +30,12 @@ public class TennisMatch {
     }
 
     public void updateWithPointWonBy(Player p) throws InvalidPlayerException, InvalidPlayerStateException, IsAlreadyWinException {
+
+
+        if(this.isFinished())
+            throw new IsAlreadyWinException();
+
+
         this.tennisSet.addPoint(p);
         if(this.tennisSet.isWin(this.player1))
         {
@@ -43,6 +49,7 @@ public class TennisMatch {
             this.addSetInHistory();
             this.newSet();
         }
+
     }
 
     private void newSet()
@@ -77,6 +84,11 @@ public class TennisMatch {
     public boolean isFinished() throws InvalidPlayerException {
         return this.bo.isWin(this.player1) || this.bo.isWin(this.player2);
     }
+
+    public String getMatchPoint(Player p1) throws InvalidPlayerException {
+        return ""+this.bo.getPlayerPoint(p1);
+    }
+
 
     @Override
     public String toString() {

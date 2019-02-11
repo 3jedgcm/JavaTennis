@@ -20,9 +20,13 @@ public class SimpleTennisGame extends TennisGame {
     }
 
     @Override
-    public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException {
+    public void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException, IsAlreadyWinException {
         GameState currentState = this.getStatePlayer(p);
         GameState adverseState = this.getStateAdversePlayer(p);
+        if(adverseState == WIN)
+        {
+            throw new IsAlreadyWinException();
+        }
         switch ((SimpleGameState)currentState)
         {
             case LOVE:

@@ -13,7 +13,7 @@ public enum SealedGameState implements GameState {
     SECURE("+"),
     WIN("WIN");
 
-    private String state = "";
+    private String state;
 
     SealedGameState(String state){
         this.state = state;

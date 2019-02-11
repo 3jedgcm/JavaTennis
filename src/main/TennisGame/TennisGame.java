@@ -62,7 +62,7 @@ public abstract class TennisGame {
 
     protected abstract void init();
 
-    public abstract void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException;
+    public abstract void addPoint(Player p) throws InvalidPlayerException, InvalidPlayerStateException, IsAlreadyWinException;
 
     public abstract String getPoint(Player p) throws InvalidPlayerException;
 

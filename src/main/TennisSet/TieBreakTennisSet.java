@@ -24,8 +24,10 @@ public class TieBreakTennisSet extends TennisSet {
     }
 
     @Override
-    public void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException {
+    public void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException, IsAlreadyWinException {
         {
+            if(this.isWin(playerOne) || this.isWin(playerTwo))
+                throw new IsAlreadyWinException();
             this.game.addPoint(p);
             boolean b = this.game.isWin(p);
             if(b)
