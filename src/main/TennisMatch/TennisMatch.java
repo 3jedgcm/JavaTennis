@@ -22,6 +22,7 @@ public class TennisMatch {
 
     public TennisMatch(Player p1, Player p2, MatchType match,boolean tieBreak)
     {
+        this.tieBreak = tieBreak;
         this.bo = new PointBO(p1,p2,match);
         this.player1 = p1;
         this.player2 = p2;
@@ -69,16 +70,18 @@ public class TennisMatch {
          return tennisSet.getGamePoint(p);
     }
 
-    public String gamesInCurrentSetForPlayer(Player p) throws InvalidPlayerException {
-        return tennisSet.getSetPoint(p);
+    public int gamesInCurrentSetForPlayer(Player p) throws InvalidPlayerException {
+        return Integer.parseInt(tennisSet.getSetPoint(p));
     }
 
-    public String gamesInSetForPlayer(int i,Player p) throws InvalidPlayerException {
-       return this.setHistory.get(i).getGamePoint(p);
+    public int gamesInSetForPlayer(int i,Player p) throws InvalidPlayerException, InvalidIndexException {
+        if(i == 0)
+            throw new InvalidIndexException();
+       return i==1 && this.setHistory.size() == 0? Integer.parseInt(this.tennisSet.getGamePoint(p)) : Integer.parseInt(this.setHistory.get(i-1).getGamePoint(p));
     }
 
-    public String currentSetNumber() throws InvalidPlayerException {
-        return ""+bo.getPlayerPoint(player1) + bo.getPlayerPoint(player2) + 1;
+    public int currentSetNumber() throws InvalidPlayerException {
+        return bo.getPlayerPoint(player1) + bo.getPlayerPoint(player2) + 1;
     }
 
     public boolean isFinished() throws InvalidPlayerException {

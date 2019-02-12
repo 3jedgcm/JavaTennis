@@ -62,14 +62,13 @@ public abstract class TennisSet {
             throw new InvalidPlayerException();
     }
 
-    protected abstract void init(Player p1, Player p2);
-
     public boolean isWin(Player p) throws InvalidPlayerException {
         return this.getStatePlayer(p).toString() == WIN.toString();
     }
+
+    protected abstract void init(Player p1, Player p2);
     public abstract void addPoint(Player p) throws InvalidPlayerStateException, InvalidPlayerException, IsAlreadyWinException;
     public abstract String getSetPoint(Player p) throws InvalidPlayerException;
-
     public abstract String getGamePoint(Player p) throws InvalidPlayerException;
 
     @Override
