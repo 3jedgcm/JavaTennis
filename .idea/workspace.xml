@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8eabe28-f6d7-4c1f-b1aa-7b00c5754f24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Exception/InvalidIndexException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tennis/GameTest/TennisMatchTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/TennisMatch/TennisMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TennisMatch/TennisMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/TennisSet/TennisSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TennisSet/TennisSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,34 +33,34 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="11" />
-          <entry key="java" value="105" />
+          <entry key="java" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="11" />
-          <entry key="JAVA" value="105" />
+          <entry key="JAVA" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7905" />
+          <entry key="java" value="7928" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7905" />
+          <entry key="JAVA" value="7928" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/TennisMatch/TennisMatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+            <state relative-caret-position="221">
+              <caret line="79" column="142" selection-start-line="79" selection-start-column="142" selection-end-line="79" selection-end-column="142" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#toString#0;class#TennisMatch#0" />
@@ -98,12 +94,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state relative-caret-position="247">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#simpleTennisGameIsAlreadyWinException#0;class#TennisMatchTest#0" />
                 <element signature="method#simpleTennisGameInvalidPlayerException#0;class#TennisMatchTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/State/MatchType.java" />
         <option value="$PROJECT_DIR$/src/main/TennisGame/TennisGame.java" />
         <option value="$PROJECT_DIR$/src/main/TennisMatch/PointBO.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/TennisGame/SimpleTennisGame.java" />
         <option value="$PROJECT_DIR$/src/test/TennisGameTest.java" />
         <option value="$PROJECT_DIR$/src/test/SimpleTennisGameTest.java" />
@@ -196,9 +203,10 @@
         <option value="$PROJECT_DIR$/src/main/Exception/InvalidPlayerStateException.java" />
         <option value="$PROJECT_DIR$/src/main/State/TieBreakMatchState.java" />
         <option value="$PROJECT_DIR$/src/main/TennisSet/TennisSet.java" />
-        <option value="$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java" />
         <option value="$PROJECT_DIR$/src/main/Exception/InvalidIndexException.java" />
+        <option value="$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java" />
         <option value="$PROJECT_DIR$/src/main/TennisMatch/TennisMatch.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
   </component>
@@ -232,41 +240,6 @@
               <item name="Tennis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="State" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="TennisGame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="TennisMatch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="TennisSet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tennis" type="b2602c69:ProjectViewProjectNode" />
@@ -310,7 +283,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549966327295" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549966387130" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -441,15 +414,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 02m 08s.xml">
-      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 02m 17s.xml">
-      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 02m 29s.xml">
-      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 02m 40s.xml">
       <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
     </history-entry>
@@ -470,6 +434,15 @@
     </history-entry>
     <history-entry file="TennisMatchTest_simpleTennisMatchWithTieBreakLongTest - 2019.02.12 at 11h 06m 31s.xml">
       <configuration name="TennisMatchTest.simpleTennisMatchWithTieBreakLongTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 11m 05s.xml">
+      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 11m 49s.xml">
+      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TennisMatchTest_simpleTennisMatchWithoutTieBreakTest - 2019.02.12 at 11h 12m 09s.xml">
+      <configuration name="TennisMatchTest.simpleTennisMatchWithoutTieBreakTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -593,16 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,18 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#simpleTennisGameIsAlreadyWinException#0;class#TennisMatchTest#0" />
-            <element signature="method#simpleTennisGameInvalidPlayerException#0;class#TennisMatchTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/TennisGame/SimpleTennisGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -822,20 +773,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/State/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Exception/InvalidPlayerException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" lean-forward="true" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -850,13 +787,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Exception/InvalidPlayerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" lean-forward="true" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/State/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/TennisMatch/TennisMatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+        <state relative-caret-position="221">
+          <caret line="79" column="142" selection-start-line="79" selection-start-column="142" selection-end-line="79" selection-end-column="142" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#toString#0;class#TennisMatch#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MatchTest/TennisMatchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#simpleTennisGameIsAlreadyWinException#0;class#TennisMatchTest#0" />
+            <element signature="method#simpleTennisGameInvalidPlayerException#0;class#TennisMatchTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

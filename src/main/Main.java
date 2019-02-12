@@ -1,8 +1,6 @@
 import Data.Player;
 import State.MatchType;
 import TennisMatch.TennisMatch;
-import TennisSet.TennisSet;
-import TennisSet.*;
 
 public class Main {
     public static void main (String[] args){
@@ -74,8 +72,6 @@ public class Main {
             tennisMatch.updateWithPointWonBy(p1);
             tennisMatch.updateWithPointWonBy(p1);
             tennisMatch.updateWithPointWonBy(p1);
-
-
 
             System.out.println(tennisMatch.isFinished());
 
